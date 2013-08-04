@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="smsCoreLib.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="rUbo7SbaeKZQuaCKmF" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EFREN RAFANAN</Value>
+    </Setting>
+    <Setting Name="C7sjZ9SZ6BQmFMTuFx" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LITE-DISTRIBUTION</Value>
+    </Setting>
+    <Setting Name="fCoBhMKoYAWRCwhoB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MWGC-Y4PN-G5K6-BP3F</Value>
+    </Setting>
+    <Setting Name="smsCoreLib_smslicense_license" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:4711/smsLauncherManagement/service/license.asmx</Value>
+    </Setting>
+    <Setting Name="lCompany" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="lType" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="lKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IsActivated" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

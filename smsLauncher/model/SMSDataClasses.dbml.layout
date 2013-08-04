@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.625, 8.5" name="SMSDataClasses">
+  <DataContextMoniker Name="/SMSDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="266efcba-b8d4-4c47-80ba-b36c023b2183" absoluteBounds="0.5, 0.5, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_Inbox" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f7f648dd-b82b-4065-9632-870f64d716d0" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f87c72b3-3c50-4347-965b-0369c44c7de9" absoluteBounds="2.75, 0.625, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_QueuedBox" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be19e080-ce12-4af5-a52c-375c45cc1be5" absoluteBounds="2.765, 1.085, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b624f93-8c71-4800-97d4-e299a636f248" absoluteBounds="2.75, 2.5, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_SentItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84c19818-81bb-4970-b1f9-f0741c6f0e06" absoluteBounds="2.765, 2.96, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cea64ea8-a6a4-4cc2-9f5c-d09e839505c3" absoluteBounds="0.5, 2.75, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_ReceivedMsg" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b95f238c-6e2d-4ca0-8c49-fb4bc5bd2a4a" absoluteBounds="0.515, 3.21, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50ab1e65-1095-47cd-a8b2-126028d50d0e" absoluteBounds="4.875, 0.625, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_Cache" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc76734c-b7eb-4b74-8ec8-cdf8025e1190" absoluteBounds="4.89, 1.085, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e879e6d-baa9-44c6-98e2-2a8b32969f50" absoluteBounds="4.875, 2.375, 2, 1.424847819010417">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_ActivationCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b61d50df-9a85-4ca5-8c52-9bef195078ff" absoluteBounds="4.89, 2.835, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="efbd364f-9ca5-40d8-b5cf-c1439a5e8961" absoluteBounds="7, 0.625, 2, 3.5613631184895826">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_Member" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e546b728-720e-4b91-b073-f67b7ea9cac4" absoluteBounds="7.015, 1.085, 1.9700000000000002, 3.001363118489583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8010f4de-e46a-4fc0-b804-6602609375ba" absoluteBounds="9.125, 0.625, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_Reply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91f19c76-4d78-4222-8902-bc4eb67d8a70" absoluteBounds="9.14, 1.085, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9ec27d95-eac0-4ade-b4f5-2ad6910a6cb9" absoluteBounds="9.125, 2.375, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_TransferFundReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb35cbf2-9699-4978-81a6-59333f73d72b" absoluteBounds="9.14, 2.835, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8c4bd044-5183-451c-a373-235484af9622" absoluteBounds="11.375, 0.75, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_eMoney" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c7d6fd9-fb64-49fc-9bc2-072811c84290" absoluteBounds="11.39, 1.21, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11ebec7a-ecdf-4022-82e2-e78ed8a824f8" absoluteBounds="2.75, 4.625, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_WeatherForecast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14272219-91dc-430b-a06a-d064636de590" absoluteBounds="2.765, 5.085, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="433a461e-8d46-4807-8d6f-6d999ea35bfa" absoluteBounds="4.875, 4, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_BayanihanSum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98c997fa-7360-4fd2-b352-b10cbb02b6e2" absoluteBounds="4.89, 4.46, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de3fa974-50f7-40f3-b25e-b87ee0ef9686" absoluteBounds="4.875, 6.25, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_Bayanihan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="705eecea-af7e-4926-9691-92f3271817d1" absoluteBounds="4.89, 6.71, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

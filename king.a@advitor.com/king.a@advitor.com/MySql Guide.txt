@@ -1,0 +1,1 @@
+download this: http://dev.mysql.com/downloads/connector/net/

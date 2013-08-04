@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SMSDataClasses">
+  <DataContextMoniker Name="/SMSDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="81875ff0-4220-4fb9-9fc5-86fcd73429ab" absoluteBounds="0.5, 0.5, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_ReceivedMsg" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4310ccba-8ec6-426e-9331-0cfcdb58b83c" absoluteBounds="0.515, 0.96, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

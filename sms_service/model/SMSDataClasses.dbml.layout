@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SMSDataClasses">
+  <DataContextMoniker Name="/SMSDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a0bbe421-e631-4541-82ad-ac179cc09e04" absoluteBounds="0.5, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_Inbox" />
+      <nestedChildShapes>
+        <elementListCompartment Id="768053a0-2edd-403c-9324-4fb03d5756d6" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f843340f-1942-478a-bd1f-2c44b597ae99" absoluteBounds="2.75, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SMSDataClassesDataContext/SMS_QueuedBox" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eac62e3d-473d-470f-90f7-218becce3fb4" absoluteBounds="2.765, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

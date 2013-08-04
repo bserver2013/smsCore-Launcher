@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://fhsc.in" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://fhsc.in" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://fhsc.in">
+      <s:element name="sendMethodWithoutValidation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMethodWithoutValidationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sendMethodWithoutValidationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMethodWithValidation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMethodWithValidationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sendMethodWithValidationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllMessage">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllMessageResult" type="tns:ArrayOfMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMessage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="message" nillable="true" type="tns:message" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="message">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SentItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsSent" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SentItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SentItemsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="sendMethodWithoutValidationSoapIn">
+    <wsdl:part name="parameters" element="tns:sendMethodWithoutValidation" />
+  </wsdl:message>
+  <wsdl:message name="sendMethodWithoutValidationSoapOut">
+    <wsdl:part name="parameters" element="tns:sendMethodWithoutValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendMethodWithValidationSoapIn">
+    <wsdl:part name="parameters" element="tns:sendMethodWithValidation" />
+  </wsdl:message>
+  <wsdl:message name="sendMethodWithValidationSoapOut">
+    <wsdl:part name="parameters" element="tns:sendMethodWithValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllMessage" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SentItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:SentItems" />
+  </wsdl:message>
+  <wsdl:message name="SentItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:SentItemsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="smsCore_apiSoap">
+    <wsdl:operation name="sendMethodWithoutValidation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send an SMS without validation</wsdl:documentation>
+      <wsdl:input message="tns:sendMethodWithoutValidationSoapIn" />
+      <wsdl:output message="tns:sendMethodWithoutValidationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMethodWithValidation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send an SMS with validation</wsdl:documentation>
+      <wsdl:input message="tns:sendMethodWithValidationSoapIn" />
+      <wsdl:output message="tns:sendMethodWithValidationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get all message to be sent</wsdl:documentation>
+      <wsdl:input message="tns:GetAllMessageSoapIn" />
+      <wsdl:output message="tns:GetAllMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SentItems">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Save all message sent to sent items</wsdl:documentation>
+      <wsdl:input message="tns:SentItemsSoapIn" />
+      <wsdl:output message="tns:SentItemsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="smsCore_apiSoap" type="tns:smsCore_apiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sendMethodWithoutValidation">
+      <soap:operation soapAction="http://fhsc.in/sendMethodWithoutValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMethodWithValidation">
+      <soap:operation soapAction="http://fhsc.in/sendMethodWithValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessage">
+      <soap:operation soapAction="http://fhsc.in/GetAllMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SentItems">
+      <soap:operation soapAction="http://fhsc.in/SentItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="smsCore_apiSoap12" type="tns:smsCore_apiSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sendMethodWithoutValidation">
+      <soap12:operation soapAction="http://fhsc.in/sendMethodWithoutValidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMethodWithValidation">
+      <soap12:operation soapAction="http://fhsc.in/sendMethodWithValidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessage">
+      <soap12:operation soapAction="http://fhsc.in/GetAllMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SentItems">
+      <soap12:operation soapAction="http://fhsc.in/SentItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="smsCore_api">
+    <wsdl:port name="smsCore_apiSoap" binding="tns:smsCore_apiSoap">
+      <soap:address location="http://localhost/damayan/api/smscore.asmx" />
+    </wsdl:port>
+    <wsdl:port name="smsCore_apiSoap12" binding="tns:smsCore_apiSoap12">
+      <soap12:address location="http://localhost/damayan/api/smscore.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
