@@ -7,6 +7,7 @@
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="launcher_id" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -22,6 +23,7 @@
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="launcher_id" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -38,20 +40,29 @@
       <s:element name="GetAllMessageResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetAllMessageResult" type="tns:ArrayOfMessage" />
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllMessageResult" type="tns:ArrayOfObjectName" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="ArrayOfMessage">
+      <s:complexType name="ArrayOfObjectName">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="message" nillable="true" type="tns:message" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="objectName" nillable="true" type="tns:objectName" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="message">
+      <s:complexType name="objectName">
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Group" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lastname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Firstname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Town" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Province" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sponsor" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Section_a" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Section_b" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pin" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="SentItems">
@@ -66,6 +77,83 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="SentItemsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberInfo_StringXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="access_token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberInfo_StringXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberInfo_StringXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Access_Token">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Access_TokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Access_TokenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Secret_Id">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_Secret_IdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Secret_IdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_AccessToken_and_SecretId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="access_token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="secret_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_AccessToken_and_SecretIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Check_AccessToken_and_SecretIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberInfo_XML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="access_token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberInfo_XMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberInfo_XMLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -95,6 +183,36 @@
   <wsdl:message name="SentItemsSoapOut">
     <wsdl:part name="parameters" element="tns:SentItemsResponse" />
   </wsdl:message>
+  <wsdl:message name="GetMemberInfo_StringXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberInfo_StringXML" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberInfo_StringXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberInfo_StringXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Access_TokenSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Access_Token" />
+  </wsdl:message>
+  <wsdl:message name="Get_Access_TokenSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Access_TokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Secret_IdSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Secret_Id" />
+  </wsdl:message>
+  <wsdl:message name="Get_Secret_IdSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Secret_IdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Check_AccessToken_and_SecretIdSoapIn">
+    <wsdl:part name="parameters" element="tns:Check_AccessToken_and_SecretId" />
+  </wsdl:message>
+  <wsdl:message name="Check_AccessToken_and_SecretIdSoapOut">
+    <wsdl:part name="parameters" element="tns:Check_AccessToken_and_SecretIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberInfo_XMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberInfo_XML" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberInfo_XMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberInfo_XMLResponse" />
+  </wsdl:message>
   <wsdl:portType name="smsCore_apiSoap">
     <wsdl:operation name="sendMethodWithoutValidation">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send an SMS without validation</wsdl:documentation>
@@ -115,6 +233,31 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Save all message sent to sent items</wsdl:documentation>
       <wsdl:input message="tns:SentItemsSoapIn" />
       <wsdl:output message="tns:SentItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInfo_StringXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get member information then return it as string xml</wsdl:documentation>
+      <wsdl:input message="tns:GetMemberInfo_StringXMLSoapIn" />
+      <wsdl:output message="tns:GetMemberInfo_StringXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Access_Token">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get access token</wsdl:documentation>
+      <wsdl:input message="tns:Get_Access_TokenSoapIn" />
+      <wsdl:output message="tns:Get_Access_TokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Secret_Id">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get secret id</wsdl:documentation>
+      <wsdl:input message="tns:Get_Secret_IdSoapIn" />
+      <wsdl:output message="tns:Get_Secret_IdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Check_AccessToken_and_SecretId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate access token and secret id</wsdl:documentation>
+      <wsdl:input message="tns:Check_AccessToken_and_SecretIdSoapIn" />
+      <wsdl:output message="tns:Check_AccessToken_and_SecretIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInfo_XML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get member information then return it as xml format</wsdl:documentation>
+      <wsdl:input message="tns:GetMemberInfo_XMLSoapIn" />
+      <wsdl:output message="tns:GetMemberInfo_XMLSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="smsCore_apiSoap" type="tns:smsCore_apiSoap">
@@ -148,6 +291,51 @@
     </wsdl:operation>
     <wsdl:operation name="SentItems">
       <soap:operation soapAction="http://fhsc.in/SentItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInfo_StringXML">
+      <soap:operation soapAction="http://fhsc.in/GetMemberInfo_StringXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Access_Token">
+      <soap:operation soapAction="http://fhsc.in/Get_Access_Token" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Secret_Id">
+      <soap:operation soapAction="http://fhsc.in/Get_Secret_Id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Check_AccessToken_and_SecretId">
+      <soap:operation soapAction="http://fhsc.in/Check_AccessToken_and_SecretId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInfo_XML">
+      <soap:operation soapAction="http://fhsc.in/GetMemberInfo_XML" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -194,13 +382,58 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetMemberInfo_StringXML">
+      <soap12:operation soapAction="http://fhsc.in/GetMemberInfo_StringXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Access_Token">
+      <soap12:operation soapAction="http://fhsc.in/Get_Access_Token" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Secret_Id">
+      <soap12:operation soapAction="http://fhsc.in/Get_Secret_Id" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Check_AccessToken_and_SecretId">
+      <soap12:operation soapAction="http://fhsc.in/Check_AccessToken_and_SecretId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInfo_XML">
+      <soap12:operation soapAction="http://fhsc.in/GetMemberInfo_XML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="smsCore_api">
     <wsdl:port name="smsCore_apiSoap" binding="tns:smsCore_apiSoap">
-      <soap:address location="http://localhost/damayan/api/smscore.asmx" />
+      <soap:address location="http://192.168.21.100/sms/api/smsCore.asmx" />
     </wsdl:port>
     <wsdl:port name="smsCore_apiSoap12" binding="tns:smsCore_apiSoap12">
-      <soap12:address location="http://localhost/damayan/api/smscore.asmx" />
+      <soap12:address location="http://192.168.21.100/sms/api/smsCore.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

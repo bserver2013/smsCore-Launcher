@@ -134,7 +134,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Web References\sms_api\message.datasource">
+    <None Include="Web References\sms_api\objectName.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\sms_api\Reference.map">
@@ -175,10 +175,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost/damayan/api/smscore.asmx">
+    <WebReferenceUrl Include="http://192.168.21.100/sms/api/smsCore.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\sms_api\</RelPath>
-      <UpdateFromURL>http://localhost/damayan/api/smscore.asmx</UpdateFromURL>
+      <UpdateFromURL>http://192.168.21.100/sms/api/smsCore.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

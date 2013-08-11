@@ -27,6 +27,7 @@ namespace smsLauncher
         static System.Timers.Timer t;
 
         smsCore_api api = new smsCore_api();
+        Settings settings = new Settings();
 
         public frmMain()
         {
@@ -123,8 +124,6 @@ namespace smsLauncher
             if (IsStarted)
             {
                 sendMethod();
-                //startThread = new Thread();
-                //startThread.Start();
             }
         }
 
@@ -336,7 +335,7 @@ namespace smsLauncher
 
             if (WebService.IsAvailable)
             {
-                api.sendMethodWithValidation(checkMessage.Number, checkMessage.Message);
+                api.sendMethodWithValidation(checkMessage.Number, checkMessage.Message, settings.Launcher_ID);
             }
             else
             {
